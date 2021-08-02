@@ -13,4 +13,41 @@ require('./bootstrap');
  */
 
 require('./components/Example');
-require('./components/Index');
+
+import React from "react";
+import ReactDOM from 'react-dom';
+import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from "./components/Index";
+import ToDoIndex from "./components/todo/Index";
+import StudentIndex from "./components/students/Index";
+import StudentCreate from "./components/students/Create";
+import StudentUpdate from "./components/students/Update";
+
+function App() {
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route exact path="/" component={Home}/>
+                <Route exact path="/todo" component={ToDoIndex}/>
+                <Route exact path="/students" component={StudentIndex}/>
+                <Route exact path="/students/create" component={StudentCreate}/>
+                <Route exact path="/students/edit/:id" component={StudentUpdate}/>
+            </Switch>
+        </BrowserRouter>
+    );
+}
+
+ReactDOM.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+);
+
+
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();

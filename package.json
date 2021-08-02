@@ -14,21 +14,28 @@
     },
     "devDependencies": {
         "@babel/preset-react": "^7.13.13",
+        "autoprefixer": "^10.3.1",
         "axios": "^0.21.1",
         "bootstrap": "^4.6.0",
         "jquery": "^3.6",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "popper.js": "^1.16.1",
-        "postcss": "^8.1.14",
+        "postcss": "^8.3.6",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "resolve-url-loader": "^4.0.0",
         "sass": "^1.32.11",
-        "sass-loader": "^11.0.1"
+        "sass-loader": "^11.0.1",
+        "tailwindcss": "^2.2.7"
     },
     "dependencies": {
+        "@headlessui/react": "^1.4.0",
+        "@heroicons/react": "^1.0.3",
+        "react-router-dom": "^5.2.0",
         "reactstrap": "^8.9.0",
-        "uuid": "^3.4.0"
+        "sweetalert2": "^11.1.0",
+        "uuid": "^3.4.0",
+        "web-vitals": "^2.1.0"
     }
 }
